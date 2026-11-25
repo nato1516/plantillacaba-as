@@ -1,0 +1,808 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    transition: 0.5s ease-in-out;
+}
+
+:root {
+
+    --cristal-fondo: rgba(228, 216, 216, 0.103);
+    --cristal-desenfoque: blur(22px);
+    --cristal-borde: 1px solid rgba(255, 255, 255, 0.25);
+    --cristal-sombra: 0 8px 32px rgba(0, 0, 0, 0.10);
+    --cristal-radio: 16px;
+    --fuente-titulos: 'Cormorant Garamond', serif;
+    --fuente-textos: 'DM Sans', sans-serif;
+    --marfil: #F5F3EC;
+    --verde-salvia: #DDE5D8;
+    --verde-oliva: #A8B99F;
+    --arena: #CDB99F;
+    --verde-bosque: #454D40;
+    --negro-bosque: #0c0f0a;
+}
+
+body {
+    font-family: var(--fuente-textos);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--fuente-titulos);
+}
+
+section {
+    padding: 60px 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*HEADER */
+.navegacion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    background: var(--cristal-fondo);
+    backdrop-filter: var(--cristal-desenfoque);
+    -webkit-backdrop-filter: var(--cristal-desenfoque);
+    border: var(--cristal-borde);
+    box-shadow: var(--cristal-sombra);
+    z-index: 10000;
+}
+
+.containerNav {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.opcionMenu {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.navItem {
+    font-size: 18px;
+    color: var(--verde-oliva);
+    font-weight: bold;
+}
+
+header {
+    background: url(../img/banner.jpg) center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100dvh;
+}
+
+.containerHeader {
+    width: 90%;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    color: var(--verde-oliva);
+    font-size: 70px;
+}
+
+.containerHeader p {
+    font-size: 20px;
+    color: var(--marfil);
+}
+
+.botones {
+    padding-top: 40px;
+    display: flex;
+    gap: 60px;
+}
+
+.btnBanner {
+    background-color: var(--arena);
+    padding: 10px 35px;
+    font-size: 18px;
+    color: var(--verde-bosque);
+    border-radius: 5px;
+}
+
+.botonNav {
+    background-color: var(--arena);
+    padding: 10px 35px;
+    font-size: 18px;
+    color: var(--verde-bosque);
+    border-radius: 5px;
+}
+
+.menuHamburguesa {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--marfil);
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* Nosotros */
+.nosotros {
+    background-color: var(--marfil);
+}
+
+.informacionNosotros {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.texto {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px
+}
+
+.texto h2 {
+    font-size: 50px;
+    color: var(--verde-bosque);
+}
+
+.texto p {
+    font-size: 18px;
+    color: var(--negro-bosque);
+}
+
+/* SERVICIOS */
+.servicios {
+    background-color: var(--verde-oliva);
+}
+
+.servicios .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 40px;
+}
+
+.servicios .container h2 {
+    font-size: 50px;
+    color: var(--marfil);
+}
+
+.parrafoOs {
+    font-size: 18px;
+    color: var(--negro-bosque);
+}
+
+.serviciosC {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.cardServicio {
+    width: 339px;
+    height: 496px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.cardServicio IMG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.cardServicio .textocrad {
+    z-index: 100;
+    position: absolute;
+    bottom: 25px;
+    padding: 5px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.textocrad h3 {
+    font-size: 25px;
+    color: var(--marfil);
+}
+
+.pCard {
+    color: var(--marfil);
+    font-size: 18px;
+}
+
+.btnCard {
+
+    background-color: var(--verde-salvia);
+    color: var(--negro-bosque);
+    width: 60%;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    height: 40px;
+    align-items: center;
+    border-radius: 5px;
+}
+
+/*INFORMACION*/
+.informacion {
+    background: url(../img/fondoSeccion.jpg) center center no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.informacion .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    gap: 40px;
+}
+
+.informacion .container h2 {
+    color: var(--verde-salvia);
+    font-size: 50px;
+}
+
+.informacion .container p {
+    color: var(--marfil);
+    font-size: 18px;
+}
+
+/*Contacto*/
+.contacto {
+    background-color: var(--marfil);
+}
+
+.contacto .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 40px;
+}
+
+.linea {
+    width: 60%;
+    height: 2px;
+    background-color: var(--negro-bosque);
+    margin: 0 auto;
+}
+
+.contacto .container h2 {
+    font-size: 50px;
+    color: var(--verde-bosque);
+}
+
+.redes {
+    background: url(../img/fondoSeccion.jpg) center center no-repeat;
+    background-size: cover;
+    min-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenidoredes {
+    padding: 20px 0;
+    background: var(--cristal-fondo);
+    backdrop-filter: var(--cristal-desenfoque);
+    -webkit-backdrop-filter: var(--cristal-desenfoque);
+    border: var(--cristal-borde);
+    box-shadow: var(--cristal-sombra);
+    width: 680px;
+    min-height: 255px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.red i {
+    color: var(--marfil);
+    font-size: 18px;
+}
+
+.red {
+    color: var(--marfil);
+    font-size: 18px;
+}
+
+footer {
+    background-color: var(--negro-bosque);
+    padding: 60px 0;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navegacioFooter {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+
+.inforFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.redesFooter i {
+    color: var(--verde-oliva);
+    font-size: 28px;
+}
+
+.lineaFooter {
+    height: 1px;
+    width: 140%;
+    background-color: var(--verde-salvia);
+}
+
+/* ==========================================
+   RESPONSIVE GENERAL
+========================================== */
+
+/* TABLETS Y LAPTOPS PEQUEÑAS */
+@media (max-width: 1024px) {
+
+    /* NAVEGACION */
+    .opcionMenu {
+        gap: 20px;
+    }
+
+    .navItem {
+        font-size: 16px;
+    }
+
+    /* HEADER */
+    h1 {
+        font-size: 60px;
+    }
+
+    /* NOSOTROS */
+    .texto {
+        width: 48%;
+        gap: 25px;
+    }
+
+    .texto h2 {
+        font-size: 42px;
+    }
+
+    .texto p {
+        font-size: 16px;
+    }
+
+    /* SERVICIOS */
+    .serviciosC {
+        gap: 25px;
+    }
+
+    .cardServicio {
+        width: 300px;
+        height: 440px;
+    }
+
+    /* INFORMACION */
+    .informacion .container h2 {
+        font-size: 42px;
+    }
+
+    /* FOOTER */
+    .lineaFooter {
+        width: 100%;
+    }
+}
+
+
+/* ==========================================
+   MENU HAMBURGUESA Y TABLETS PEQUEÑAS
+========================================== */
+
+@media (max-width: 750px) {
+
+    /* CONTENEDORES */
+    section {
+        padding: 45px 0;
+    }
+
+    .container,
+    .containerNav,
+    .containerHeader {
+        width: 90%;
+    }
+
+    /* NAVEGACION */
+    .navegacion {
+        padding: 15px 0;
+    }
+
+    .containerNav {
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    /* BOTON HAMBURGUESA */
+    .menuHamburguesa {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        border: none;
+        color: var(--marfil);
+        font-size: 32px;
+        cursor: pointer;
+        order: 3;
+    }
+
+    /* MENU DESPLEGABLE */
+    .opcionMenu {
+        position: absolute;
+        top: calc(100% + 15px);
+        right: -80px;
+        width: 60%;
+        height: 90dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 100px 20px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        pointer-events: none;
+    }
+
+    /* MENU ACTIVO */
+    .opcionMenu.activo {
+        opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+
+    /* EFECTO VIDRIO */
+    background: rgba(44, 44, 43, 0.82);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    box-shadow: 0 8px 32px rgba(12, 15, 10, 0.15);
+    }
+
+    .navItem {
+        font-size: 17px;
+        color: var(--verde-salvia);
+    }
+
+    /* BOTON NAV */
+    .botonNav {
+        margin-left: auto;
+        margin-right: 15px;
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    /* HEADER */
+    header {
+        min-height: 100svh;
+        background-position: center;
+    }
+
+    .containerHeader {
+        min-height: 100svh;
+        padding-top: 100px;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    .containerHeader p {
+        font-size: 16px;
+    }
+
+    .botones {
+        padding-top: 25px;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .btnBanner {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
+    /* NOSOTROS */
+    .informacionNosotros {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .texto {
+        width: 100%;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .texto h2 {
+        font-size: 38px;
+    }
+
+    .texto p {
+        font-size: 16px;
+    }
+
+    .informacionNosotros img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* SERVICIOS */
+    .servicios .container {
+        gap: 25px;
+    }
+
+    .servicios .container h2 {
+        font-size: 40px;
+    }
+
+    .parrafoOs {
+        font-size: 16px;
+    }
+
+    .serviciosC {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .cardServicio {
+        width: 100%;
+        max-width: 380px;
+        height: 450px;
+        overflow: hidden;
+    }
+
+    .cardServicio img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .cardServicio .textocrad {
+        width: 100%;
+        left: 0;
+        bottom: 25px;
+    }
+
+    .textocrad h3 {
+        font-size: 25px;
+    }
+
+    .pCard {
+        font-size: 16px;
+    }
+
+    /* INFORMACION */
+    .informacion {
+        min-height: 400px;
+        padding: 50px 0;
+        background-position: center;
+    }
+
+    .informacion .container {
+        gap: 25px;
+    }
+
+    .informacion .container h2 {
+        font-size: 38px;
+    }
+
+    .informacion .container p {
+        font-size: 16px;
+    }
+
+    /* CONTACTO */
+    .contacto .container {
+        gap: 25px;
+    }
+
+    .contacto .container h2 {
+        font-size: 40px;
+    }
+
+    .linea {
+        width: 80%;
+    }
+
+    /* REDES */
+    .redes {
+        min-height: 300px;
+        padding: 30px 5%;
+    }
+
+    .contenidoredes {
+        width: 100%;
+        min-height: 230px;
+        padding: 25px 15px;
+        gap: 15px;
+    }
+
+    .red,
+    .red i {
+        font-size: 16px;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 40px 0;
+    }
+
+    .inforFooter {
+        gap: 25px;
+        width: 100%;
+    }
+
+    .navegacioFooter {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .lineaFooter {
+        width: 100%;
+    }
+
+    .redesFooter i {
+        font-size: 24px;
+    }
+}
+
+
+/* ==========================================
+   CELULARES PEQUEÑOS
+========================================== */
+
+@media (max-width: 480px) {
+
+    /* CONTENEDORES */
+    .container,
+    .containerNav,
+    .containerHeader {
+        width: 92%;
+    }
+    .containerHeader{
+        text-align: center;
+        align-items: center;
+    }
+    /* NAVEGACION */
+    .opcionMenu {
+        gap: 20px;
+        padding: 25px 15px;
+    }
+
+    .navItem {
+        font-size: 15px;
+    }
+
+    .menuHamburguesa {
+        font-size: 29px;
+    }
+
+    .botonNav {
+        padding: 7px 14px;
+        font-size: 13px;
+    }
+
+    /* HEADER */
+    h1 {
+        font-size: 38px;
+    }
+
+    .containerHeader p {
+        font-size: 15px;
+    }
+
+    .botones {
+        gap: 12px;
+    }
+
+    .btnBanner {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+
+    /* NOSOTROS */
+    .texto h2 {
+        font-size: 34px;
+    }
+
+    .texto p {
+        font-size: 15px;
+    }
+
+    /* SERVICIOS */
+    .servicios .container h2 {
+        font-size: 34px;
+    }
+
+    .cardServicio {
+        height: 400px;
+    }
+
+    .textocrad h3 {
+        font-size: 23px;
+    }
+
+    /* INFORMACION */
+    .informacion {
+        min-height: 350px;
+    }
+
+    .informacion .container h2 {
+        font-size: 34px;
+    }
+
+    .informacion .container p {
+        font-size: 15px;
+    }
+
+    /* CONTACTO */
+    .contacto .container h2 {
+        font-size: 34px;
+    }
+
+    /* REDES */
+    .contenidoredes {
+        min-height: 210px;
+    }
+
+    /* FOOTER */
+    .navegacioFooter {
+        gap: 15px;
+    }
+
+    .redesFooter i {
+        font-size: 22px;
+    }
+    .cardServicio{
+        width: 100%;
+    }
+}
